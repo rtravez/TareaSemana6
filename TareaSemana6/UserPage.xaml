@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TareaSemana6.UserPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Consumir web service Put" FontSize="20" HorizontalTextAlignment="Center">
+            </Label>
+            <Label FontSize="20">Username</Label>
+            <Entry Placeholder="ingresa username" Keyboard="Text" x:Name="txtUsername"></Entry>
+
+            <Label FontSize="20">Password</Label>
+            <Entry Placeholder="ingresa password" IsPassword="True" x:Name="txtPassword"></Entry>
+
+            <Button Text="Actualizar" x:Name="btnPut" Clicked="btnPut_Clicked">
+            </Button>
+            <Button Text="Eliminar" x:Name="btnDelete" Clicked="btnDelete_Clicked">
+            </Button>           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

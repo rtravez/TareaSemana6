@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              NavigationPage.HasNavigationBar="False"
+             x:Class="TareaSemana6.MainPage">
+
+    <StackLayout>
+        <Label Text="Consumir web service Post" FontSize="20" HorizontalTextAlignment="Center">
+        </Label>
+        <Label FontSize="20">Username</Label>
+        <Entry Placeholder="ingresa username" Keyboard="Text" x:Name="txtUsername"></Entry>
+
+        <Label FontSize="20">Password</Label>
+        <Entry Placeholder="ingresa password" IsPassword="True" x:Name="txtPassword"></Entry>
+
+        <Button Text="Insertar" x:Name="btnPost" Clicked="BtnPost_Clicked">
+        </Button>
+
+        <Label Text="Consumir web service Get" FontSize="20" HorizontalTextAlignment="Center">
+        </Label>
+        <Label x:Name="texto" Text="">
+        </Label>
+        <Button Text="Consultar" x:Name="btnGet" Clicked="BtnGet_Clicked">
+        </Button>
+        <ListView x:Name="MyListView" RowHeight="100" ItemSelected="MyListView_ItemSelected" >
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Username" />
+                    <Label Text="Password" />
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <ViewCell>
+                        <Grid  >
+                            <Label  Grid.Row="0" Grid.Column="0" x:Name="lbltipo" Text="{Binding username}"></Label>
+                            <Label Grid.Row="0" Grid.Column="1" x:Name="lbldescripcion" Text="{Binding password}"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
